@@ -7,7 +7,7 @@ function video_api_check($post_id){
 if( !$stream_key){
 $url = 'https://sandbox.api.video/auth/api-key';
 $stream_url = 'https://ws.api.video/live-streams';
-$key = 'Qa93QLhTw65NeHAEYrgA2mn9KFojchxUFcyVCKjAqxK';
+$key = get_option('api_video_keys');
 $response = wp_remote_request($url, array(
     'method' => 'POST',
     'headers' => array(
